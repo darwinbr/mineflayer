@@ -1,3 +1,31 @@
+## 2.8.1
+
+fix error on scoreboard removal
+
+## 2.8.0
+
+lot of new features from @wvffle :
+
+* support for block entities
+* improved block bars support
+* add block in sight
+* fix scoreboard support
+* add eating support
+* add tab complete support
+* add fishing support
+* better sign text support
+* repl example
+
+## 2.7.5
+
+* improve basic find block a bit
+
+## 2.7.4
+
+* start the bot alive in all cases
+* correct run speed and use it to limit the speed properly (thanks @CheezBarger)
+* emit error instead of throwing when loading a chunk (thanks @ArcticZeroo)
+
 ## 2.7.3
 
 * use docsify for docs

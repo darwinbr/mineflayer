@@ -38,7 +38,7 @@ mineflayer.supportedVersions.forEach((supportedVersion, i) => {
   const PORT = Math.round(30000 + Math.random() * 20000)
   const mcData = require('minecraft-data')(supportedVersion)
   const version = mcData.version
-  const MC_SERVER_JAR_DIR = process.env.MC_SERVER_JAR_DIR
+  const MC_SERVER_JAR_DIR = process.env.MC_SERVER_JAR_DIR || `${process.cwd()}/server_jars`
   const MC_SERVER_JAR = `${MC_SERVER_JAR_DIR}/minecraft_server.${version.minecraftVersion}.jar`
   const wrap = new Wrap(MC_SERVER_JAR, `${MC_SERVER_PATH}_${supportedVersion}`)
   wrap.on('line', (line) => {
@@ -62,6 +62,7 @@ mineflayer.supportedVersions.forEach((supportedVersion, i) => {
 
         console.log('starting bot')
         bot.once('login', () => {
+          wrap.writeServer('op flatbot\n')
           console.log('waiting a second...')
           // this wait is to get all the window updates out of the way before we start expecting exactly what we cause.
           // there are probably other updates coming in that we want to get out of the way too, like health updates.
@@ -89,7 +90,6 @@ mineflayer.supportedVersions.forEach((supportedVersion, i) => {
               console.log('pong')
               assert.ok(results.latency >= 0)
               assert.ok(results.latency <= 1000)
-              wrap.writeServer('op flatbot\n')
               begin()
             })
           })

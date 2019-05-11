@@ -1,6 +1,6 @@
 {
   "name": "mineflayer",
-  "version": "2.7.3",
+  "version": "2.8.1",
   "description": "create minecraft bots with a stable, high level API",
   "main": "index.js",
   "scripts": {
@@ -19,12 +19,12 @@
   },
   "license": "MIT",
   "dependencies": {
-    "minecraft-data": "^2.26.0",
-    "minecraft-protocol": "^1.5.2",
+    "minecraft-data": "^2.31.0",
+    "minecraft-protocol": "^1.8.1",
     "mojangson": "^0.2.1",
     "prismarine-biome": "^1.0.1",
     "prismarine-block": "^1.0.1",
-    "prismarine-chunk": "^1.9.0",
+    "prismarine-chunk": "^1.9.1",
     "prismarine-entity": "^0.2.0",
     "prismarine-item": "^1.0.1",
     "prismarine-recipe": "^1.0.1",
@@ -36,8 +36,8 @@
   "devDependencies": {
     "doctoc": "^1.0.0",
     "minecraft-wrap": "^1.2.1",
-    "mocha": "^5.0.5",
+    "mocha": "^6.1.2",
     "require-self": "^0.2.1",
-    "standard": "^11.0.1"
+    "standard": "^12.0.0"
   }
 }
